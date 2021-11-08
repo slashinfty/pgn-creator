@@ -41,5 +41,5 @@ pgn += results[index];
 
 const file = rl.question('File name: ');
 
-console.log(pgn);
 require('fs').writeFileSync(require('path').resolve(__dirname, `./${file}.pgn`), pgn);
+console.log(`\n${pgn}\n\nSaved at ${require('path').resolve(__dirname, `./${file}.pgn`)}`);

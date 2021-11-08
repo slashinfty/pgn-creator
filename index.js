@@ -34,7 +34,7 @@ const timeArr = time.split('+').map(t => parseInt(t));
 if (timeArr.length === 1) timeArr.push(0);
 pgn += `[TimeControl "${60 * timeArr[0]}+${timeArr[1]}"]\n\n`;
 
-const moves = rl.question('Moves (comma separated): ');
+const moves = rl.question('Moves (comma separated, comments in curly braces): ');
 const moveArr = moves.split(',').map(m => m.trim());
 for (let i = 0; i < moveArr.length; i += 2) pgn += `${Math.floor((i + 1) / 2) + 1}. ${moveArr[i]} ${moveArr[i + 1] === undefined ? '' : moveArr[i + 1] + ' '}`;
 pgn += results[index];
